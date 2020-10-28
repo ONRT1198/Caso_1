@@ -1,0 +1,89 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/estilo.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Iniciar sesión</title>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Libro-Matic</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="sesion.html">Iniciar Sesion</a>
+            </li>
+
+            <li class="nav-item">
+
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<h1>Ingresa Tus Datos
+</h1>
+<form name="login">
+    <table width="200" border="0">
+        <tr>
+            <th scope="row"><h2>Usuario</h2></th>
+            <td><span class="cnt">
+           <input name="usuario" type="text" class="Input" value="" size="20" />
+         </span></td>
+        </tr>
+        <tr>
+            <th height="33" scope="row"><h2>Clave</h2></th>
+            <td><span class="cnt">
+           <input name="password" type="password" class="Input" value="" size="20" />
+         </span></td>
+            <td><span class="cnt">
+           <input value="Entrar" target="_parent" onclick="Login()" type="button" class="boton"/>
+         </span></td>
+        </tr>
+        <tr>
+            <th scope="row"><input type="reset" name="Borrar" id="Borrar" value="Reset" class="boton" /></th>
+        </tr>
+    </table>
+</form>
+
+<script language="JavaScript">
+    function Login(){
+        var done=0;
+        var usuario=document.login.usuario.value;
+        var password=document.login.password.value;
+        if (usuario=="krischevi24" && password=="kevink24") {
+            window.location="index.html";
+        }
+        if (usuario=="onrt" && password=="oscar98") {
+            window.location="index.html";
+        }
+        if (usuario=="" && password=="") {
+            window.location="errorpopup.html";
+        }
+    }
+</script>
+</center>
+<script language="Javascript">
+    <!-- Begin
+    document.oncontextmenu = function(){return false}
+    // End -->
+</script>
+
+<div class="footer">
+    Copyright BatraCorp Inc &copy; <?=date("Y")?>
+</div>
+<script src="js/jquery-3.5.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
